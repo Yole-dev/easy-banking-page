@@ -48,9 +48,10 @@ header section:first-of-type {
     display: none;
     justify-content: center;
     position: absolute;
-    background: rgba(0, 0, 0, 0.021);
+    background: rgba(0, 0, 0, 0.363);
     height: 90%;
     width: 100%;
+    z-index: 999;
 }
 
 
@@ -71,6 +72,21 @@ header section:first-of-type {
     text-align: center;
     gap: 1rem;
     font-weight: 300;
+}
+
+.hero {
+    background: url(images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-y: -5rem;
+    background-position-x: -1rem;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.hero img{
+    width: 100%;
+    position: relative;
+    bottom: 7rem;
 }
 
 
