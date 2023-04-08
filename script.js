@@ -4,6 +4,7 @@
 const openNav = document.querySelector('.openNav');
 const closeNav = document.querySelector('.closeNav');
 const navBar = document.querySelector('.navBar');
+const navHeader = document.querySelector('.navHeader');
 
 openNav.addEventListener('click', function() {
     closeNav.classList.remove('hide');
