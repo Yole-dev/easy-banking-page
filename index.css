@@ -111,17 +111,18 @@ main section:first-of-type {
 .hero {
     background: url(images/bg-intro-mobile.svg);
     background-repeat: no-repeat;
-    background-position-y: -5rem;
-    background-position-x: -1rem;
+    background-position-y: -4rem;
+    background-position-x: 1rem;
     overflow: hidden;
     padding: 0 1rem;
     margin-bottom: -7rem;
+    max-width: 100%;
 }
 
 .hero img{
     width: 100%;
     position: relative;
-    bottom: 7rem;
+    bottom: 8.2rem;
 }
 
 main section:first-of-type{
