@@ -5,17 +5,20 @@ const openNav = document.querySelector('.openNav');
 const closeNav = document.querySelector('.closeNav');
 const navBar = document.querySelector('.navBar');
 const navHeader = document.querySelector('.navHeader');
+const heroImage = document.querySelector('.heroImage');
 
 openNav.addEventListener('click', function() {
     closeNav.classList.remove('hide');
     openNav.classList.add('hide');
     navBar.style.display = 'flex';
+    heroImage.style.opacity = '0';
 });
 
 closeNav.addEventListener('click', function() {
     closeNav.classList.add('hide');
     openNav.classList.remove('hide');
     navBar.style.display = 'none';
+    heroImage.style.opacity = '1';
 });
 
 // for desktop navbar hover effects
