@@ -32,9 +32,15 @@ h2 {
     color: hsl(233, 26%, 24%);
 }
 
+
+
 h3,h4,h5,h6 {
     color: hsl(233, 26%, 24%);
     font-weight: 500;
+}
+
+h4:hover {
+    color: hsl(136, 65%, 51%);
 }
 
 p {
@@ -113,6 +119,10 @@ main section:first-of-type {
     margin-bottom: 4rem;
 }
 
+.heroTextDesktop{
+    display: none;
+}
+
 .hero {
     background: url(images/bg-intro-mobile.svg);
     background-repeat: no-repeat;
@@ -122,6 +132,10 @@ main section:first-of-type {
     padding: 0 1rem;
     margin-bottom: -7rem;
     max-width: 100%;
+}
+
+.heroDesktop {
+    display: none;
 }
 
 .hero img{
@@ -150,6 +164,10 @@ main button {
     color: white;
 }
 
+main button:hover {
+    background: linear-gradient(to right, hsla(136, 100%, 82%, 0.966), hsl(191, 90%, 88%));
+}
+
 /* end */
 
 main section:nth-child(2) {
@@ -169,6 +187,12 @@ main section:nth-child(2) {
 }
 
 main section:nth-child(2) > section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > section:first-of-type > div:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,6 +306,10 @@ footer section:nth-child(2) ul li a {
     color: white;
 }
 
+footer section:nth-child(2) ul li a:hover {
+    color:hsl(136, 65%, 51%);
+}
+
 footer section:nth-child(3) {
     display: flex;
     flex-direction: column;
@@ -296,7 +324,11 @@ footer button {
     color: white;
 }
 
+footer button:hover {
+    background: linear-gradient(to right, hsla(136, 100%, 82%, 0.966), hsl(191, 90%, 88%));
+}
 
+/* media query for desktop view */
 @media screen and (min-width: 600px) {
     header section:first-of-type {
         display: none;
@@ -306,11 +338,11 @@ footer button {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        padding: 1.3rem 3rem;
-        border-bottom: 1px solid black;
+        padding: 1.2rem 3rem;
         background: white;
         position: fixed;
         width: 100%;
+        z-index: 999;
     }
 
     .desktopNav ul {
@@ -328,8 +360,8 @@ footer button {
         height: 2px;
         background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
         position: relative;
-        top: 2.2rem;
-        display: none;
+        top: 1.6rem;
+        opacity: 0;
     }
 
     .desktopNav ul li a {
@@ -344,13 +376,74 @@ footer button {
         color: white;
     }
 
+
+    .desktopNav button:hover {
+        background: linear-gradient(to right, hsla(136, 100%, 82%, 0.966), hsl(191, 90%, 88%));
+    }
+
     .hero {
         display: none;
+    }
+
+    main section:first-of-type{
+        padding-top: 5.3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    main > section:first-of-type > div:nth-child(2) {
+        align-items: start;
+        max-width: 50%;
+    }
+
+
+    main section:first-of-type > div:nth-child(2) h2{
+        font-size: 60px;
+    }
+
+    
+    .heroTextMobile {
+        display: none;
+    }
+
+    .heroTextDesktop{
+        display: block;
+        font-size: 20px;
+    }
+
+    main section:first-of-type > div:nth-child(2) button {
+        font-size: 18px;
+        padding: 1.3rem 2rem;
+        border-radius: 4rem;
+    }
+
+    .heroDesktop {
+        display: block;
+        background: url(images/bg-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-position-y: -17rem;
+        background-position-x: -3.1rem;
+        overflow: hidden;
+    }
+
+    .heroDesktop img {
+        width: 100%;
+        position: relative;
+        bottom: 6.8rem;
+        left: 9.3rem;
+        z-index: 99;
     }
 
     main > section {
         padding-left: 4rem !important;
     } 
+
+    main > section:nth-child(2) {
+        margin-top: -16rem;
+    }
 
     main > section:nth-child(2) section {
         padding-right: 20rem;
@@ -460,6 +553,10 @@ footer button {
 
     .attribution {
         display: none;
+    }
+
+    .sb {
+        font-size: 26px !important;
     }
 
     /* footer section end */
