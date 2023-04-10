@@ -271,14 +271,23 @@ footer {
     padding: 2rem 0rem;
 }
 
+.logofooter {
+    fill: white;
+}
+
 .socials {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.socials img {
+.socials svg {
     width: 25px;
+}
+
+.socialsIcon:hover {
+    fill:hsl(136, 65%, 51%);
+    transition: 0.3s 0.5s ease-in-out;
 }
 
 footer section:first-of-type {
@@ -522,7 +531,7 @@ footer button:hover {
         gap: 2rem;
     }
 
-    .socials img {
+    .socials svg {
         width: 27px;
     }
 
