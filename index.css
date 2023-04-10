@@ -295,6 +295,10 @@ footer section:first-of-type {
     flex-direction: column;
 }
 
+footer section:first-of-type > svg {
+    align-self: center;
+}
+
 footer section:nth-child(2) {
     display: flex;
     flex-direction: column;
@@ -529,6 +533,10 @@ footer button:hover {
 
     footer section:first-of-type {
         gap: 2rem;
+    }
+
+    footer section:first-of-type > svg {
+        align-self: start;
     }
 
     .socials svg {
